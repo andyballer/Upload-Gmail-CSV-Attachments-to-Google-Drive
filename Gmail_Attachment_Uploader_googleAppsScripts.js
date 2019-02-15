@@ -1,16 +1,4 @@
-//help from: https://stackoverflow.com/questions/46492616/using-google-script-to-get-attachment-from-gmail
 
-/**
-*Run runEveryDay to trigger uploadSpreadsheetToDrive every day between 1am and 2am, replacing your old data with current data.
-*uploadDataToDrive gets a specified number of spreadsheets from your emails, and uploads them to your specified root Drive folder 
-*based on the search returned. Once the data is in Google Drive, you can access visualize your data with tools like Splunk and Google 
-*Data Studio. 
-*Need to set the variables before running. 
-**/
-
-//Upload Gmail Attachment to Google Drive
-
-//run from this once i get it working
 function runEveryDay() {
   // Trigger every 24 hours. run at 1:00am each day
   ScriptApp.newTrigger('uploadDataToDrive')
@@ -18,7 +6,6 @@ function runEveryDay() {
       .atHour(1)
       .everyDays(1)
       .create();
-  
 }
 
 // variables to set
@@ -60,7 +47,6 @@ function getExistingSheet(spreadsheetId){
   }
   return currentSheet
 }
-  
 
 function writeEmailLinesToCsv(csvFile){
   Logger.log("Writing csv lines to Drive file");
@@ -114,7 +100,6 @@ function getSpreadsheetFromEmail() {
   Logger.log("Returning attachments");
   return attachments;
 }
-
 
 function appendDateToCsv(csvData, date){
   for(var i = 1; i<csvData.length;i++){
