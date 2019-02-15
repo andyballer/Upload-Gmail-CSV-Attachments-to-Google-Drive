@@ -22,12 +22,12 @@ function runEveryDay() {
 }
 
 // variables to set
-var mySpreadsheetId = "16EEWvHsHmEEwtynAzkEbdUx1g24cywy0rseLpd-8vWY"; // string ID of file, found in URL
-var emailSearchTerm = '"testdata"'; //search term for your email results
-var attachmentName = "testData.csv"; //name of your attachment in email
-var myEmail = "andrew.ball.j@gmail.com"; // email to send to in event of error
-var header = ["furniture", "food", "test"]; // string array header
-var numEmails = 5; //  the number of emails you want to limit your search to (sorted by most recent)
+var mySpreadsheetId = ""; // string ID of file, found in URL
+var emailSearchTerm = '""'; //search term for your email results
+var attachmentName = ".csv"; //name of your attachment in email
+var myEmail = "@gmail.com"; // email to send to in event of error
+var header = [""]; // string array header
+var numEmails = 1; //  the number of emails you want to limit your search to (sorted by most recent)
 var numAttachmentsWanted = 1; // maximum total number of attachments desired from email search to upload to Drive
 var doAppendDate = true; //boolean to append date to last column in CSV. If true then must set "Date" as last column in header
 
